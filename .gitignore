@@ -4,7 +4,8 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
+# Ignore bundler config
+
 /.bundle
 
 # Ignore all logfiles and tempfiles.
@@ -15,3 +16,5 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+.idea/runConfigurations/
+.idea/vcs.xml
