@@ -1,0 +1,8 @@
+<%= form_tag(profile_attachment_profile_index_path , remote: true) do %>
+    <%= text_field 'profile_name', nil, placeholder: 'search profile' %>
+    <%= submit_tag 'search' %>
+<% end%>
+
+<div id = "profile_attachment" >
+
+</div>
