@@ -1,2 +1,9 @@
-<h1>Profile#create</h1>
-<p>Find me in app/views/profile/create.html.erb</p>
+<div style="position: relative">
+  <img src="<%= @face.img_url%>" style="position: absolute">
+  <% @faces.each do  |i|  %>
+  <svg height="900"  width="900" style="position: absolute; z-index: 500">
+    <rect  x="<%= i["face_rectangle"]["left"] %>" y="<%= i["face_rectangle"]["top"] %>"
+           height="<%=i["face_rectangle"]["height"] %>" width="<%= i["face_rectangle"]["width"]%>" style="fill:none;stroke-width:1;stroke:blue"/>
+  </svg>
+      <% end %>
+</div>
