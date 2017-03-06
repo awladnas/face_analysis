@@ -1,9 +1,17 @@
 <div class = "well">
   <%= form_for @profile, url: profile_index_path ,html: { multipart: true } do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
       <%= f.label "Image Url" %>
       <%= f.text_field :attachment %>
       <%= f.submit "Detect", class: "btn btn-primary"  %>
+  <% end %>
+</div>
+
+<div style="margin-top: 50px">
+  <%= form_for @profile, url: compare_path ,html: { multipart: true } do |f| %>
+      <%= f.label "Image Url" %>
+      <%= f.text_field :attachment %>
+      <%= f.label "Image Url" %>
+      <%= f.text_field :attachment_2 %>
+      <%= f.submit "Compare", class: "btn btn-primary"  %>
   <% end %>
 </div>

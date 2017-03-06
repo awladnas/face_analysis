@@ -44,11 +44,15 @@ class ProfileController < ApplicationController
   end
 
   def compare_face
+
+    img_url1 = params["profile"]["attachment"]
+    img_url2 = params["profile"]["attachment_2"]
+
     @face_info =  HTTParty.post("https://api-us.faceplusplus.com/facepp/v3/compare", :body=> {
         :api_key => "0BPOcncjMOdVxsYce0K8eAAEDBvlT6_h",
         :api_secret => "r8L47AnUGN34VJL-5ftp6rHZ9UHDKcSL",
-        :face_token1 => "f3cb5356007a60eb8517dd961a5b5b0f",
-        :face_token2 => "f3cb5356007a60eb8517dd961a5b5b0f"
+        :image_url1 => img_url1,
+        :image_url2 => img_url2
     } )
 
     render plain: "#{@face_info}"
